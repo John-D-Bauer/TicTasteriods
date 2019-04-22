@@ -12,19 +12,9 @@ void gameLoop()
   arduboy.drawLine(42, 0, 42, 64, WHITE);
   arduboy.drawLine(84, 0, 84, 64, WHITE);
 
-  if (playerTurn)
-  {
-  pointerFunction();
-  }
-  
-  XorOFunction();
-
-  if(!playerTurn)
-  {
-    easyAI();
-  }
-
+  scrollLetters();
   checkBoard();
+  drawSpaceship();
 } 
 
 
