@@ -14,16 +14,32 @@ enum class BoxPosition : int
   BottomR,
 };
 
-struct Pointer 
+struct Letter 
 {
   int x;
   int y;
-  BoxPosition pointerPos;
+  bool breakableLetter;
 };
 
-Pointer pointer = {17, 7, BoxPosition::TopL};
+Letter xLetter {0, 0, false};
+Letter oLetter {0, 0, true};
 
-BoxPosition pointerPos = BoxPosition::TopL;
+struct Spaceship 
+{
+  int x;
+  int y;
+};
+
+Spaceship spaceship {0, 64 - 4};
+
+struct Bullet
+{
+  int x;
+  int y;
+  bool hasHitLetter;
+};
+
+Bullet bullet {0, 0, false};
 
 int gameBoard[9];
 
